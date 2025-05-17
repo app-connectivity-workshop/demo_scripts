@@ -1,0 +1,8 @@
+kind: Site
+apiVersion: skupper.io/v2alpha1
+metadata:
+  name: travel-db
+  namespace: travel-db
+spec:
+  ha: true
+  linkAccess: default

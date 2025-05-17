@@ -1,0 +1,7 @@
+kind: AccessGrant
+apiVersion: skupper.io/v2alpha1
+metadata:
+  name: my-grant
+  namespace: travel-db
+spec:
+  redemptionsAllowed: 10

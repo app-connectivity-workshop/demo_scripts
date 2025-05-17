@@ -1,0 +1,9 @@
+kind: Listener
+apiVersion: skupper.io/v2alpha1
+metadata:
+  name: mysqldb
+  namespace: travel-db
+spec:
+  host: mysqldb
+  port: 3306
+  routingKey: appconn

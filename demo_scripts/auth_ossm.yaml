@@ -1,0 +1,16 @@
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-only-trusted-services
+  namespace: travel-agency
+spec:
+  selector:
+    matchLabels:
+      app: discounts
+      version: v1
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        principals:
+        - cluster.local/ns/travel-agency/sa/discount-access-sa
