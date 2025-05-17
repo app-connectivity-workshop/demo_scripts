@@ -1,14 +1,14 @@
 #!/bin/bash
 
-oc apply -f https://raw.githubusercontent.com/app-connectivity-workshop/refs/heads/main/demo_scripts/openshift_site.yaml
+oc apply -f https://raw.githubusercontent.com/app-connectivity-workshop/demo_scripts/refs/heads/main/demo_scripts/openshift_site.yaml
 echo "Waiting 50 seconds for site to be up"
 sleep 50
 
-oc apply -f https://raw.githubusercontent.com/app-connectivity-workshop/refs/heads/main/demo_scripts/listener.yaml
+oc apply -f https://raw.githubusercontent.com/app-connectivity-workshop/demo_scripts/refs/heads/main/demo_scripts/listener.yaml
 echo "Waiting 20 seconds for listener to be created"
 sleep 20
 
-oc apply -f https://raw.githubusercontent.com/app-connectivity-workshop/refs/heads/main/demo_scripts/grant.yaml
+oc apply -f https://raw.githubusercontent.com/app-connectivity-workshop/demo_scripts/refs/heads/main/demo_scripts/grant.yaml
 echo "Waiting 20 seconds for grant to be created"
 sleep 20
 
@@ -35,8 +35,7 @@ sleep 10
 
 
 
-watch oc get pods -n travel-agency
+watch -n 2 'echo "👀 Press Ctrl+C once you see 2 pods per deployment"; echo ""; oc get pods -n travel-agency'
 
-echo "Press ctrl+c to if you see 2 pods per deployment"
 
 
