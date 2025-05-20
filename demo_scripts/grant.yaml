@@ -5,3 +5,4 @@ metadata:
   namespace: travel-db
 spec:
   redemptionsAllowed: 10
+  expirationWindow: 5h
